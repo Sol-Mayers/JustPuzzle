@@ -1,0 +1,554 @@
+body {
+  cursor: url(../img/orangecursor.png), default!important;
+}
+
+.main-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 680px;
+  height: 425px;
+  background-image: url(../img/zamok3.jpg);
+  background-repeat: no-repeat;
+  position: relative;
+  cursor: url(../img/orangecursor.png), default!important;
+}
+
+.no-image {
+  background-image: none;
+}
+
+.squares {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 136px;
+  height: 85px;
+  vertical-align: top;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 2;
+  cursor: url(../img/orangepointer.png), default!important;
+  opacity: 0;
+}
+
+.appear-square {
+  animation: appearing 1s linear forwards;
+}
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.make-puzzle {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  box-shadow: inset rgba(255,255,255,0.2) 0px  0px 18px 5px,
+              inset rgba(0,0,0,0.5) 0px 0px 18px 5px,
+              inset #ffffff 0px 2px 2px 0px,
+  0px 3px 3px 1px #000000;
+  background-color: red;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  font-family: 'Yusei Magic', sans-serif;
+  cursor: url(../img/orangepointer.png), default!important;
+}
+
+.change-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  background-color: #FDE910;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  box-shadow: inset rgba(255,255,255,0.2) 0px  0px 18px 5px,
+              inset rgba(0,0,0,0.5) 0px 0px 18px 5px,
+    inset #ffffff 0px 2px 2px 0px,
+  0px 3px 3px 1px #000000;
+  border: 1px solid #000000;
+  margin-left: 20px;
+  font-family: 'Yusei Magic', sans-serif;
+  color: rgba(0,0,0,1);
+  cursor: url(../img/orangepointer.png), default!important;
+}
+
+.make-puzzle:active {
+  box-shadow: inset rgba(20,20,20,0.2) 0px  0px 18px 5px,
+              inset rgba(0,0,0,0.5) 0px 0px 18px 5px;
+}
+
+.change-img:active {
+  box-shadow: inset rgba(20,20,20,0.2) 0px  0px 18px 5px,
+              inset rgba(0,0,0,0.5)      0px 0px 18px 5px;
+}
+
+@keyframes moving {
+  0% {
+    background-color: #FDE910;
+  }
+
+  50% {
+    background-color: #CABB16;
+  }
+
+  100% {
+    background-color: #FDE910;
+  }
+}
+
+.change-anim {
+  animation: moving 1s infinite linear;
+}
+
+.menu-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #00FFFF;
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+}
+
+.big-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px auto 10px auto;
+  width: 680px;
+}
+
+.one {
+  background-position: 0 0;
+  cursor: pointer;
+  left: 0px;
+  top: 0px;
+}
+
+.two {
+  background-position: 25% 0;
+  cursor: pointer;
+  left: 136px;
+  top: 0px;
+}
+
+.three {
+  background-position: 50% 0;
+  cursor: pointer;
+  left: 272px;
+  top: 0px;
+}
+
+.four {
+  background-position: 75% 0;
+  cursor: pointer;
+  left: 408px;
+  top: 0px;
+}
+
+.five {
+  background-position: 100% 0;
+  cursor: pointer;
+  left: 544px;
+  top: 0px;
+}
+
+.six {
+  background-position: 0 25%;
+  cursor: pointer;
+  left: 0px;
+  top: 85px;
+  height: 86px;
+}
+
+.seven {
+  background-position: 25% 25%;
+  cursor: pointer;
+  left: 136px;
+  top: 85px;
+  height: 86px;
+}
+
+.eight {
+  background-position: 50% 25%;
+  cursor: pointer;
+  left: 272px;
+  top: 85px;
+  height: 86px;
+}
+
+.nine {
+  background-position: 75% 25%;
+  cursor: pointer;
+  left: 408px;
+  top: 85px;
+  height: 86px;
+}
+
+.ten {
+  background-position: 100% 25%;
+  cursor: pointer;
+  left: 544px;
+  top: 85px;
+  height: 86px;
+}
+
+.eleven {
+  background-position: 0 50%;
+  cursor: pointer;
+  left: 0px;
+  top: 170px;
+}
+
+.twelve {
+  background-position: 25% 50%;
+  cursor: pointer;
+  left: 136px;
+  top: 170px;
+}
+
+.thirteen {
+  background-position: 50% 50%;
+  cursor: pointer;
+  left: 272px;
+  top: 170px;
+}
+
+.fourteen {
+  background-position: 75% 50%;
+  cursor: pointer;
+  left: 408px;
+  top: 170px;
+}
+
+.fifteen {
+  background-position: 100% 50%;
+  cursor: pointer;
+  left: 544px;
+  top: 170px;
+}
+
+.sixteen {
+  background-position: 0 75%;
+  cursor: pointer;
+  left: 0px;
+  top: 255px;
+}
+
+.seventeen {
+  background-position: 25% 75%;
+  cursor: pointer;
+  left: 136px;
+  top: 255px;
+}
+
+.eighteen {
+  background-position: 50% 75%;
+  cursor: pointer;
+  left: 272px;
+  top: 255px;
+}
+
+.nineteen {
+  background-position: 75% 75%;
+  cursor: pointer;
+  left: 408px;
+  top: 255px;
+}
+
+.twenty {
+  background-position: 100% 75%;
+  cursor: pointer;
+  left: 544px;
+  top: 255px;
+}
+
+.twentyone {
+  background-position: 0 100%;
+  cursor: pointer;
+  left: 0px;
+  top: 340px;
+}
+
+.twentytwo {
+  background-position: 25% 100%;
+  cursor: pointer;
+  left: 136px;
+  top: 340px;
+}
+
+.twentythree {
+  background-position: 50% 100%;
+  cursor: pointer;
+  left: 272px;
+  top: 340px;
+}
+
+.twentyfour {
+  background-position: 75% 100%;
+  cursor: pointer;
+  left: 408px;
+  top: 340px;
+}
+
+.twentyfive {
+  background-position: 100% 100%;
+  cursor: pointer;
+  left: 544px;
+  top: 340px;
+}
+
+.puzzle-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: auto;
+  width: 680px;
+}
+
+.title-puzzle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  box-sizing: border-box;
+  font-family: 'Bangers', cursive;
+  color: #FDE910;
+  text-shadow: #000000 -2px 2px 5px;
+  font-size: 35px;
+  width: 100px;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+
+.square-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 136px;
+  height: 85px;
+}
+
+.drop-square {
+  background-color: #30d7c9;
+}
+
+.square-active {
+  box-shadow: 0px 0px 2px 1px #ffffff;
+}
+
+.completed-alert {
+  font-family: 'Bangers', cursive;
+  font-size: 100px;
+  color: #18FF19;
+  text-shadow: #000000 5px 5px 0px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: transparent;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 51;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 120%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.make-animation {
+  display: flex;
+  animation-name: appeared;
+  animation-duration: 3s;
+}
+
+@keyframes appeared {
+  0% {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translate(-50%, -75%);
+    opacity: 4;
+  }
+
+  15% {
+    transform: translate(-50%, -70%);
+    opacity: 4;
+  }
+
+  90% {
+    transform: translate(-50%, -70%);
+    opacity: 4;
+  }
+
+  100% {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+}
+
+.frame-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 680px;
+  height: 425px;
+  position: absolute;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.wall-inside {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 680px;
+  height: 425px;
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.tray {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #02758D;
+  width: 100%;
+  height: 180px;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  box-sizing: border-box;
+  position: relative;
+  filter: brightness(30%);
+  box-shadow: inset #000000 0px 0px 20px 10px;
+}
+
+.light {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100px;
+  height: 5px;
+  background-color: #9C9C9C;
+  border: 1px solid grey;
+  top: 0px;
+  left: 290px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.second-light {
+  top: 173px;
+  transform: rotate(180deg);
+}
+
+.make-light {
+  animation: lighting-ok 500ms linear forwards;
+}
+
+.make-room {
+  animation: lighting-room 500ms linear forwards;
+}
+
+@keyframes lighting-room {
+  0% {
+    filter: brightness(30%);
+  }
+
+  100% {
+    filter: brightness(100%);
+  }
+}
+
+@keyframes lighting-ok {
+  0% {
+    background-color: #9C9C9C;
+    box-shadow: 0px 0px 0px 0px #FFF6A8;
+  }
+
+  100% {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 30px 0px #FFF6A8;
+  }
+
+  .off-light {
+    animation: lighting-off 500ms linear forwards;
+  }
+
+  .off-room {
+    animation: lighting-roomoff 500ms linear forwards;
+  }
+@  keyframes lighting-roomoff {
+    0% {
+    filter: brightness(100%);
+  }
+
+  100% {
+    filter: brightness(30%);
+  }
+}
+
+@keyframes lighting-off {
+  0% {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 30px 0px #FFF6A8;
+  }
+
+  100% {
+    background-color: #9C9C9C;
+    box-shadow: 0px 0px 0px 0px #FFF6A8;
+  }
+
